@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>ZERHUN: Coding Project by Andreas Abaidoo</title>
+    <title>FIZZBUZZ: Coding Project by Andreas Abaidoo</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,7 +23,7 @@
     <!-- ======== Nav Section =========== -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand mt-1 logoFont" href="index.html"><img src="./img/AD-logo-light.png" alt="my brand" height="50">&nbsp; ZERHUN</a>
+            <a class="navbar-brand mt-1 logoFont" href="index.html"><img src="./img/AD-logo-light.png" alt="my brand" height="50">&nbsp; FIZZBUZZ</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -55,28 +55,29 @@
         <div class="container mt-5 mb-5">
             <div class="row g-4 mt-3">
                 <div class="col-sm-12 col-md-5 border-end border-2 px-4">
-                    <h1 class="display-5 fw-bold mb-3 logoFont">ZERHUN: A Coding Project </h1>
+                    <h1 class="display-5 fw-bold mb-3 logoFont">FIZZBUZZ: A Coding Project </h1>
                     <h4 class="lead">
-                        Live life one loop at a time. A JS coding project to display numbers from 0 - 100.
-                        Display even numbers in <strong>BOLD</strong>.
+                        A fizzbuzz project using javascript and bootstrap.
                     </h4>
                     <h2 class="mt-5 border-2 border-bottom logoFont">Instructions</h2>
-                    <p>Enter starting value and an ending value. Press the button to view values</p>
+                    <p>Enter fizz and buzz values</p>
                 </div>
                 <div class="col-sm-7 col-md-7">
                     <div class="px-3 py-2">
-                        <h5 class="logoFont">Enter Values</h5>
+                        <!-- <h5 class="logoFont">Enter Values Here</h5> -->
                         <form class="row">
                             <div class="col">
-                                <input id="startValue" type="number" class="form-control" placeholder="Start Value" 
-                                    value="0" aria-label="Start Value">
+                                <label for="fizzValue" class="form-label logoFont">Enter Fizz Value</label>
+                                <input id="fizzValue" type="number" class="form-control" placeholder="Fizz Value" 
+                                    value="0" aria-label="Fizz Value">
                             </div>
                             <div class="col">
-                                <input id="endValue" type="number" class="form-control" placeholder="End Value" 
-                                    value="100" aria-label="End Value">
+                                <label for="buzzValue" class="form-label logoFont">Enter Buzz Value</label>
+                                <input id="buzzValue" type="number" class="form-control" placeholder="Buzz Value" 
+                                    value="100" aria-label="Buzz Value">
                             </div>
                             <div class="col-12 mt-4 d-flex justify-content-lg-end justify-content-md-start">
-                                <button id="btnSubmit" type="button" onclick="getValues()" class="btn btn-dark btn-lg">Display ZERHUN</button>
+                                <button id="btnSubmit" type="button" onclick="getValues()" class="btn btn-dark btn-lg">Buzz Me!</button>
                             </div>
                         </form>
                         <h2 class="mt-4 border-bottom border-2">Results</h2>
