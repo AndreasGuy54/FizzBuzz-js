@@ -25,6 +25,34 @@ const fizzBuzz = (fizzValue, buzzValue) => {
     return fbValues;
 }
 
+// Another way to solve the problem
+const fizzBuzzB = (fizzValue, buzzValue) => {
+    let fbValues = [];
+    let Fizz = false;
+    let Buzz = false;
+
+    for (let i = 1; i < 100; i++) {
+        Fizz = i % fizzValue === 0;
+        Buzz = i % buzzValue === 0;
+
+        switch (true) {
+            case Fizz && Buzz:
+                fbValues.push('FizzBuzz');
+                break;
+            case Fizz:
+                fbValues.push('Fizz');
+                break;
+            case Buzz:
+                fbValues.push('Buzz');
+                break;
+            default:
+                fbValues.push(i);
+                break;
+        }
+    }
+    return fbValues;
+}
+
 // display the results and style the fizz, buzz and fizzbuzz values
 const displayValues = (fbValues) => {
     let tableBody = document.querySelector('#results');
