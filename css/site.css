@@ -86,17 +86,17 @@ pre[class*="language-"] {
     word-wrap: break-word;
 }
 
-.fizz {
+.Fizz {
     font-weight: bold;
     color: var(--primary-color);
 }
 
-.buzz {
+.Buzz {
     font-weight: bold;
-    color: var(--secondary-color);
+    color: rgb(41, 165, 124);
 }
 
-.fizzBuzz {
-    font-weight: bold;
-    color: crimson;
+.FizzBuzz {
+    font-weight: bolder;
+    color: rgb(240, 155, 27);
 }

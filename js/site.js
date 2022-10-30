@@ -26,58 +26,34 @@ const fizzBuzz = (fizzValue, buzzValue) => {
 }
 
 // display the results and style the fizz, buzz and fizzbuzz values
-const displayValues = (fbValues, fizzValue, buzzValue) => {
-    let templateRows = '';
+const displayValues = (fbValues) => {
+    let tableBody = document.querySelector('#results');
+    let templateRow = document.querySelector('#fbTemplate');
 
-    fbValues.forEach(value => {
-        let className = '';
+    tableBody.innerHTML = "";
 
-        if (value === 'FizzBuzz') {
-            className = 'fizzBuzz';
-        } else if (value === 'Fizz') {
-            className = 'fizz'
-        } else if (value === 'Buzz') {
-            className = 'buzz'
-        } 
-        templateRows += `<tr><td class="${className}">${value}</td></tr>`;
-    });
+    for (let i = 0; i < fbValues.length; i+=5) {
 
-    document.querySelector('#results').innerHTML = templateRows;
+        //selecting only the tds in the tr
+        let tableRow = document.importNode(templateRow.content, true);
+        let rowCols = tableRow.querySelectorAll('td');
 
+        // calculate which corresponding css class to add to the table data
+        rowCols[0].classList.add(fbValues[i])
+        rowCols[0].textContent = fbValues[i];
+
+        rowCols[1].classList.add(fbValues[i + 1])
+        rowCols[1].textContent = fbValues[i + 1];
+
+        rowCols[2].classList.add(fbValues[i + 2])
+        rowCols[2].textContent = fbValues[i + 2];
+
+        rowCols[3].classList.add(fbValues[i + 3])
+        rowCols[3].textContent = fbValues[i + 3];
+
+        rowCols[4].classList.add(fbValues[i + 4])
+        rowCols[4].textContent = fbValues[i + 4];
+
+        tableBody.appendChild(tableRow);
+    }
 }
-
-// // get the values from the inputs on the app page
-// const getValues = () => {
-//     let firstNum = parseInt(document.querySelector('#startValue').value)
-//     let lastNum = parseInt(document.querySelector('#endValue').value)
-
-//     let numbers = generateNumbers(firstNum, lastNum);
-
-//     displayNumbers(numbers);
-// }
-// // generate numbers from the start value to the end value
-// const generateNumbers = (startVal, endVal) => {
-//     let nums = [];
-
-//     for (let i = startVal; i <= endVal; i++) {
-//         nums.push(i);
-//     }
-//     return nums;
-// }
-
-// // Display the numbers and make even numbers bold
-// const displayNumbers = (nums) => {
-//     let templateRows = '';
-
-//     nums.forEach(num => {
-//         let className = '';
-
-//         if (num % 2 === 0) {
-//             className = 'even';
-//         } 
-        
-//         templateRows += `<tr><td class="${className}">${num}</td></tr>`;
-//     });
-
-//     document.querySelector('#results').innerHTML = templateRows;
-// }
